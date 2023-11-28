@@ -62,7 +62,16 @@ public class MultiThreadedDownloader extends Thread {
             output.close();
             input.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            String errorMessage = "下载时出现错误：" + e.getMessage();
+        String stackTrace = getStackTrace(e);
+        System.err.println(errorMessage);
+        System.err.println("堆栈日志输出的信息：");
+        System.err.println(stackTrace);
+        System.err.println("请不要将此控制台截图发给别人，这没有任何作用。");
+        System.err.println("你应该全选提交控制台输出的所有信息，并前往 https://github.com/Lavaver/Shiwulu-OpenDownload/issues 发 issues 以帮助作者快速定位问题并修复");
+        System.err.println("而且，对于部分诸如 CDN 镜像站、百度网盘、GitHub Releases 下载可能会直接报错 403 导致程序出错，请见谅！");
+
+        JOptionPane.showMessageDialog(null, errorMessage, "下载出错", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -83,6 +92,13 @@ public class MultiThreadedDownloader extends Thread {
         long elapsedTime = currentTime - startTime;
         long remainingTime = (fileSize - downloaded) * elapsedTime / downloaded;
         return remainingTime / 1000 + " 秒";
+    }
+
+    private String getStackTrace(Exception e) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        e.printStackTrace(pw);
+        return sw.toString();
     }
 
     public static void main(String[] args) {
