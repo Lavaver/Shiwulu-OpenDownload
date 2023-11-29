@@ -24,7 +24,7 @@ If you need the Chinese version, please refer to [here](/README.md)
 
 > If you get the jar file by compilation, the file name may be slightly different, depending on the actual situation.
 
-> The standard command to run a jar file is java -jar ``[filename].jar``
+> The standard command to run a jar file is ``java -jar [filename].jar``
 3. Enter the download link and the save path in the interface, and click the start button to begin the download.
 
 ## Notes
