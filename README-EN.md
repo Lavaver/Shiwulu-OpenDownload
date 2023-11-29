@@ -21,6 +21,10 @@ If you need the Chinese version, please refer to [here](/README.md)
 > The release page of the project's repository has compiled jar files ready for use. 
 2. Run the `Shiwulu.OpenDownload.jar` file to launch the GUI interface for the download program.
 > If double-clicking does not open the GUI, please open a bash terminal and run ``java -jar Shiwulu.OpenDownload.jar``
+
+> If you get the jar file by compilation, the file name may be slightly different, depending on the actual situation.
+
+> The standard command to run a jar file is java -jar ``[filename].jar``
 3. Enter the download link and the save path in the interface, and click the start button to begin the download.
 
 ## Notes
