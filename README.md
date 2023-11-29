@@ -13,7 +13,7 @@
 
 1. 克隆或下载此仓库到本地计算机。
 2. 运行 `Shiwulu.OpenDownload.jar` 文件以启动下载程序的GUI界面。
-> 如果双击运行未出现 GUI ，请打开 bach ，然后运行 ``java -jar Shiwulu.OpenDownload.jar``
+> 如果双击运行未出现 GUI ，请打开 bash ，然后运行 ``java -jar Shiwulu.OpenDownload.jar``
 3. 在界面中输入下载链接和保存路径，并点击开始按钮开始下载。
 
 ## 注意事项
