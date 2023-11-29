@@ -14,7 +14,7 @@ If you need the Chinese version, please refer to [here](/README.md)
 ## How to Use
 
 1. Clone or download this repository to your local computer.
-> Take Visual Studio Code as an example, open the cloned folder, locate the project file, then press ``Ctrl+Shift+P`` to call up the task panel, search for jar keywords, click to package into jar, and wait for the compilation to complete according to the default settings.
+> Take Visual Studio Code as an example, open the cloned folder, locate the project file, then press ``Ctrl+Shift+P`` to call up the task panel, search for jar keywords, click to ``Java: Export Jar``, and wait for the compilation to complete according to the default settings.
 
 > If you have a Java Development Kit 8 (JDK 8), then you can compile using the javac command.
 
