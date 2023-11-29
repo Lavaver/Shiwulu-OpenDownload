@@ -17,6 +17,8 @@ If you need the Chinese version, please refer to [here](/README.md)
 > Take Visual Studio Code as an example, open the cloned folder, locate the project file, then press ``Ctrl+Shift+P`` to call up the task panel, search for jar keywords, click to package into jar, and wait for the compilation to complete according to the default settings.
 
 > If you have a Java Development Kit 8 (JDK 8), then you can compile using the javac command.
+
+> The release page of the project's repository has compiled jar files ready for use. 
 2. Run the `Shiwulu.OpenDownload.jar` file to launch the GUI interface for the download program.
 > If double-clicking does not open the GUI, please open a bash terminal and run ``java -jar Shiwulu.OpenDownload.jar``
 3. Enter the download link and the save path in the interface, and click the start button to begin the download.
