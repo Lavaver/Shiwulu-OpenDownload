@@ -21,6 +21,10 @@
 > 该项目仓库的 Release 页有已经编译好的 jar 文件可供使用。
 2. 运行 `Shiwulu.OpenDownload.jar` 文件以启动下载程序的GUI界面。
 > 如果双击运行未出现 GUI ，请打开 bash ，然后运行 ``java -jar Shiwulu.OpenDownload.jar``
+
+> 如果你是通过编译方式获取的 jar 文件，那么文件名可能会有些许差别，以实际情况为准。
+
+> 运行 jar 文件的标准命令为 ``java -jar [文件名].jar``
 3. 在界面中输入下载链接和保存路径，并点击开始按钮开始下载。
 
 ## 注意事项
