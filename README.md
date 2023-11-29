@@ -14,6 +14,9 @@
 ## 如何使用
 
 1. 克隆或下载此仓库到本地计算机。
+> 以 Visual Studio Code 为例，打开克隆好的文件夹，定位到工程文件，然后按下 ``Ctrl+Shift+P`` 呼出任务面板，搜索 jar 关键词，点击打包成 jar ，按默认设置等待编译完成即可。
+
+> 如果你有 Java 开发套件 8（JDK 8），那么你可以使用 javac 命令编译。
 2. 运行 `Shiwulu.OpenDownload.jar` 文件以启动下载程序的GUI界面。
 > 如果双击运行未出现 GUI ，请打开 bash ，然后运行 ``java -jar Shiwulu.OpenDownload.jar``
 3. 在界面中输入下载链接和保存路径，并点击开始按钮开始下载。
