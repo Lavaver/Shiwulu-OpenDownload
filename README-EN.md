@@ -26,6 +26,11 @@ If you need the Chinese version, please refer to [here](/README.md)
 
 > The standard command to run a jar file is ``java -jar [filename].jar``
 3. Enter the download link and the save path in the interface, and click the start button to begin the download.
+> The download process requires an internet connection.
+
+> The multi-threaded download speed of the downloader depends on the bandwidth limit. If the bandwidth limit is low, it will have a slight impact on the download speed.
+
+> If using a mobile hotspot, it is recommended to use a USB wired hotspot connection. When the network status of the carrier fluctuates significantly, it will severely affect the download speed.
 
 ## Notes
 
