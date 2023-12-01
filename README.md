@@ -19,12 +19,14 @@
 > 如果你有 Java 开发套件 8（JDK 8），那么你可以使用 javac 命令编译。
 
 > 该项目仓库的 Release 页有已经编译好的 jar 文件可供使用。
+
 2. 运行 `Shiwulu.OpenDownload.jar` 文件以启动下载程序的GUI界面。
 > 如果双击运行未出现 GUI ，请打开 bash ，然后运行 ``java -jar Shiwulu.OpenDownload.jar``
 
 > 如果你是通过编译方式获取的 jar 文件，那么文件名可能会有些许差别，以实际情况为准。
 
 > 运行 jar 文件的标准命令为 ``java -jar [文件名].jar``
+
 3. 在界面中输入下载链接和保存路径，并点击开始按钮开始下载。
 > 下载过程中需要有一个 Internet 连接。
 
@@ -40,6 +42,40 @@
 - 请**时刻保持跟进最新版本**，因为最新版本可能包含重要的安全与质量补丁。
 - 本作者已经**强烈不推荐使用受 Log4j2 影响的版本**，这会导致严重事故。
 - 本体最低运行 Java 版本为 1.8（Java 8），低于此版本可能导致一系列兼容问题。
+
+## 遇到代码错误导致的无法编译的解决方案
+
+- 可能是源代码工程内**缺少引用**导致，将引用恢复到如下所示即可恢复：
+```java
+import java.awt.SystemTray;
+import java.awt.TrayIcon;
+import java.awt.Toolkit;
+import java.awt.AWTException;
+import java.awt.PopupMenu;
+import java.awt.MenuItem;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.*;
+import java.nio.file.*;
+import java.net.URL;
+import java.net.HttpURLConnection;
+
+import javax.swing.JOptionPane;
+```
+- 在涉及主类 ``public class MultiThreadedDownloader extends Thread {}`` 部分因文件名更改导致主类被更改：
+  - 修改文件名为 ``MultiThreadedDownloader`` 恢复主类关系；
+  - 更改 ``public class MultiThreadedDownloader extends Thread {}`` 中的 ``MultiThreadedDownloader`` 至当前工程文件名恢复主类关系。
+- 在涉及关键部分代码时犯语法错误导致：
+  - 订正语法；
+  - 如果你正在使用 Visual Studio ，请将 IDE 切换到 Code 版本，并按错误提示订正功能错误。
+- 无法编译 Debug 运行：
+  - 如果你正在使用 Visual Studio ，请将 IDE 切换到 Code 版本，它会自动找到 JDK 并编译运行。
+- 出现划删除线的语句：
+  - 你所使用的 JDK 版本已弃用该方法，如果你想兼容高版本 Java ，则可能需要对相关语句进行更改。
+- 出现 ``[方法] cannot be resolved to a type`` 错误：
+  - 你意外删除了这个方法需要的引用。以 ``TrayIcon cannot be resolved to a type`` 为例，这因为你缺少了 ``import java.awt.TrayIcon;`` 引用导致的。具体情况需要参考现实情况添加引用。
+- 出现 ``Syntax error on token [主类], Identifier expected`` 错误：
+  - 你意外将工程文件放置在这个工程 src 目录以外的地方了，放回 src 目录就可以重新识别出工程文件了。
 
 ## 贡献指南
 
