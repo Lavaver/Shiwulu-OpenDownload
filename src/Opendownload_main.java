@@ -17,6 +17,9 @@ public class Opendownload_main extends Thread {
     private String downloadUrl;
     private String savePath;
     private TrayIcon trayIcon;
+    long startTime;
+    private long totalDownloaded;
+    int updateCount;
 
     public Opendownload_main(String downloadUrl, String savePath) {
         this.downloadUrl = downloadUrl;
@@ -94,7 +97,7 @@ public class Opendownload_main extends Thread {
             byte data[] = new byte[1024];
             long total = 0;
             int count;
-            long startTime = System.currentTimeMillis();
+            startTime = System.currentTimeMillis();
 
             while ((count = input.read(data)) != -1) {
                 total += count;
@@ -134,6 +137,22 @@ public class Opendownload_main extends Thread {
 
     private void updateProgress(String fileName, long fileSize, long downloaded, int progress, String eta) {
         String progressInfo = "已接收：" + formatSize(downloaded) + " / " + formatSize(fileSize) + " 数据" + " | 进度：" + progress + "% | 剩余时间（ETA）：" + eta;
+
+        // 计算下载速度
+        long currentTime = System.currentTimeMillis();
+        long elapsedTime = currentTime - this.startTime;
+        double speed = (double) downloaded / elapsedTime;
+        String speedInfo = "下载速度：" + formatSize((long) speed) + "/s";
+
+        // 计算平均下载速度
+        totalDownloaded += downloaded;
+        updateCount++;
+        double averageSpeed = (double) totalDownloaded / (elapsedTime / 1000);
+        String averageSpeedInfo = "平均速度：" + formatSize((long) averageSpeed) + "/s";
+
+        // 将下载速度和平均下载速度添加到进度信息中
+        progressInfo += " | " + speedInfo + " | " + averageSpeedInfo;
+
         System.out.println(progressInfo);
     }
 
