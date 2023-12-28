@@ -63,9 +63,10 @@ import java.net.HttpURLConnection;
 
 import javax.swing.JOptionPane;
 ```
-- Possible modifications to the main class `public class MultiThreadedDownloader extends Thread {}` due to file name changes:
-  - Rename the file to `MultiThreadedDownloader` to restore the relationship with the main class;
-  - Change `MultiThreadedDownloader` in `public class MultiThreadedDownloader extends Thread {}` to the current project file name to restore the relationship with the main class.
+- Possible modifications to the main class `public class Opendownload_main extends Thread {}` due to file name changes:
+  - Rename the file to `Opendownload_main` to restore the relationship with the main class;
+  - Change `Opendownload_main` in `public class Opendownload_main extends Thread {}` to the current project file name to restore the relationship with the main class.
+  > Starting with the LTS 70 distribution, the original ``MultiThreadedDownloader`` namespace has been replaced by ``Opendownload_main`` and deprecated. If you are still using an older distribution, you may want to consider updating your code or distribution body.
 - Syntax errors caused by typos in critical sections of code:
   - Correct the syntax;
   - If you are using Visual Studio, switch the IDE to the Code version and correct the functional error as prompted.
