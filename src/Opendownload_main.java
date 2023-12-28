@@ -19,6 +19,7 @@ public class Opendownload_main extends Thread {
     private TrayIcon trayIcon;
     long startTime;
     private long totalDownloaded;
+    //我 有 抑 郁 症
     int updateCount;
 
     public Opendownload_main(String downloadUrl, String savePath) {
