@@ -34,7 +34,6 @@ If you need the Chinese version, please refer to [here](/README.md)
 
 > If using a mobile hotspot, it is recommended to use a USB wired hotspot connection. When the network status of the carrier fluctuates significantly, it will severely affect the download speed.
 
-> Also, starting January 1, 2024, it will begin to offer its releases supporting .NET in parallel, with the new .NET releases not only retaining the original functionality, but also supporting new .NET-unique features (e.g., features where the original Java version fetched certain links that resulted in an inability to properly read the target size of a file, 403 errors, etc.)
 ## Notes
 
 - Ensure that the system has sufficient disk space to save the downloaded files.
@@ -82,14 +81,11 @@ import javax.swing.JOptionPane;
 
 I, like everyone else in the open source community, am naturally committed to improving the ease of use of software through constant patch fixes.
 
-Given the upcoming release on the .NET platform in parallel with the existing Java release, I'm going to give you a quick overview of the lifecycle of these two releases.
-
 **The Long Term Support (LTS) version will have up to 16 years of support, the Parallel (TTS) version will have up to 10 years of support, and the Standard version will have up to 5 years of support**.
 
 | Editions | Releases | LTS (Long Term Support) | Lifecycle Until |
 | --- | --- | --- | --- |
 | Latest version (Java, 1.1.2) | √ Yes | √ Yes | 2040/01/10 |
-| Latest Version (.NET, Preview) | √ Yes | = Concurrent(TTS) | 2034/01/01 |
 | 1.1 | √ Yes | × No | 2029/01/01 |
 | 1.0 | √ yes | × no | 2029/01/01 |
 
