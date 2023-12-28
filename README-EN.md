@@ -86,7 +86,7 @@ I, like everyone else in the open source community, am naturally committed to im
 
 | Editions | Releases | LTS (Long Term Support) | Lifecycle Until |
 | --- | --- | --- | --- |
-| Latest version (Java, 1.1.2) | √ Yes | √ Yes | 2040/01/10 |
+| Latest version (Java, 1.1.2.x) | √ Yes | √ Yes | 2040/01/10 |
 | 1.1 | √ Yes | × No | 2029/01/01 |
 | 1.0 | √ yes | × no | 2029/01/01 |
 
