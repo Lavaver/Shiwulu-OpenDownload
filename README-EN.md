@@ -42,6 +42,7 @@ If you need the Chinese version, please refer to [here](/README.md)
 - **Always keep up with the latest version**, as the latest version may contain important security and quality patches.
 - The author **strongly recommends against using versions affected by Log4j2**, as this could lead to serious incidents.
 - The minimum required Java version for running the tool is 1.8 (Java 8). Running on versions lower than this may lead to compatibility issues.
+- If you need to use a parameter such as ``-quickdownload``, add the parameter **after the name of the distribution** (example: ``java -jar LTSmain.jar -quickdownload [download link] [save path]``).There is no parameter functionality in versions prior to LTS 1.1.2.70.
 
 ## Solutions for Compilation Errors Caused by Code Issues
 
