@@ -2,7 +2,7 @@
 
 若你需要英文版，请 [参阅此处](/README-EN.md)
 
-同时，本作者的该项目也在 [Gitee 码云](https://gitee.com/Lavalive/Shiwulu-OpenDownload) 同步镜像更新。
+同时，本作者的该项目也在 [Gitee 码云](https://gitee.com/Lavalive/Shiwulu-OpenDownload) 同步镜像更新
 
 极为高效的设计，配合多线程与轻量化的技术，这是一个奇迹，也是应该做的。
 
