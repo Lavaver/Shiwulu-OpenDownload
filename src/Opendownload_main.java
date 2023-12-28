@@ -33,6 +33,7 @@ public class Opendownload_main extends Thread {
             connection.connect();
             requiredSpace = connection.getContentLength();
 
+            
             Path saveFolderPath = saveFolder.toPath();
             FileStore store = Files.getFileStore(saveFolderPath);
 
@@ -147,11 +148,11 @@ public class Opendownload_main extends Thread {
         if (size < 1024) {
             return size + " 字节";
         } else if (size < 1024 * 1024) {
-            return String.format("%.2f KB", size / 1024.0);
+            return String.format("%.2f KiB", size / 1024.0);
         } else if (size < 1024 * 1024 * 1024) {
-            return String.format("%.2f MB", size / (1024.0 * 1024));
+            return String.format("%.2f MiB", size / (1024.0 * 1024));
         } else {
-            return String.format("%.2f GB", size / (1024.0 * 1024 * 1024));
+            return String.format("%.2f GiB", size / (1024.0 * 1024 * 1024));
         }
     }
 
@@ -227,16 +228,23 @@ return;
         System.out.println("Shiwulu OpenDownload");
         System.out.println("请支持自由软件事业的开发，谢谢！");
         System.out.println("如果你是通过购买而来的此发行版本体，那么你应该要求退款，并做法律程序。");
-        System.out.println("由 Lavaver 开发、发行的实用下载本体。1.1.2.70 LTS 发行版");
+        System.out.println("由 Lavaver 开发、发行的实用下载本体。1.1.2.70c LTS 发行版");
 
     } else if (args.length == 1 && args[0].equals("-help")) {
         System.out.println("帮助");
         System.out.println("----------------");
         System.out.println("下载文件请直接启动本体，或使用 -quickdownload [下载地址] [保存路径] 快速开始一个新下载。");
         System.out.println("使用 -about 获取发行版本体相关信息，使用 -help 呼出此页。");
+        System.out.println("使用 -updatelog 呼出更新日志");
+
+    } else if (args.length == 1 && args[0].equals("-updatelog")) {
+        System.out.println("更新日志（LTS 70c 版本）");
+        System.out.println("----------------");
+        System.out.println("- 修正了在字节、KiB、MiB 以及 GiB 的单位换算笔误");
+        System.out.println("有关详细信息，请参阅 https://github.com/Lavaver/Shiwulu-OpenDownload/releases");
 
     } else {
-        System.out.println("请提供正确的参数：下载链接和保存路径");
+        System.out.println("参数错误：请提供该参数正确的值（如：-quickdownload 后需要跟链接和保存路径）");
     }
 }
 }
