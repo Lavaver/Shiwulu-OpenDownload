@@ -34,6 +34,7 @@ If you need the Chinese version, please refer to [here](/README.md)
 
 > If using a mobile hotspot, it is recommended to use a USB wired hotspot connection. When the network status of the carrier fluctuates significantly, it will severely affect the download speed.
 
+> Also, starting January 1, 2024, it will begin to offer its releases supporting .NET in parallel, with the new .NET releases not only retaining the original functionality, but also supporting new .NET-unique features (e.g., features where the original Java version fetched certain links that resulted in an inability to properly read the target size of a file, 403 errors, etc.)
 ## Notes
 
 - Ensure that the system has sufficient disk space to save the downloaded files.
