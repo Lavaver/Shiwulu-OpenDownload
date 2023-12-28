@@ -13,12 +13,12 @@ import java.net.HttpURLConnection;
 
 import javax.swing.JOptionPane;
 
-public class MultiThreadedDownloader extends Thread {
+public class Opendownload_main extends Thread {
     private String downloadUrl;
     private String savePath;
     private TrayIcon trayIcon;
 
-    public MultiThreadedDownloader(String downloadUrl, String savePath) {
+    public Opendownload_main(String downloadUrl, String savePath) {
         this.downloadUrl = downloadUrl;
         this.savePath = savePath;
     }
@@ -206,14 +206,35 @@ return;
             return;
         }
 
-        MultiThreadedDownloader downloader = new MultiThreadedDownloader(downloadUrl, savePath);
+        Opendownload_main downloader = new Opendownload_main(downloadUrl, savePath);
         downloader.start();
     } else if (args.length == 2) {
         String downloadUrl = args[0];
         String savePath = args[1];
-
-        MultiThreadedDownloader downloader = new MultiThreadedDownloader(downloadUrl, savePath);
+        
+        Opendownload_main downloader = new Opendownload_main(downloadUrl, savePath);
         downloader.start();
+        return; // 添加此行以确保程序在执行完毕后退出
+    } else if (args.length == 3 && args[0].equals("-quickdownload")) {
+        String downloadUrl = args[1];
+        String savePath = args[2];
+        
+        Opendownload_main downloader = new Opendownload_main(downloadUrl, savePath);
+        downloader.start();
+        return; // 添加此行以确保程序在执行完毕后退出
+        
+    } else if (args.length == 1 && args[0].equals("-about")) {
+        System.out.println("Shiwulu OpenDownload");
+        System.out.println("请支持自由软件事业的开发，谢谢！");
+        System.out.println("如果你是通过购买而来的此发行版本体，那么你应该要求退款，并做法律程序。");
+        System.out.println("由 Lavaver 开发、发行的实用下载本体。1.1.2.70 LTS 发行版");
+
+    } else if (args.length == 1 && args[0].equals("-help")) {
+        System.out.println("帮助");
+        System.out.println("----------------");
+        System.out.println("下载文件请直接启动本体，或使用 -quickdownload [下载地址] [保存路径] 快速开始一个新下载。");
+        System.out.println("使用 -about 获取发行版本体相关信息，使用 -help 呼出此页。");
+
     } else {
         System.out.println("请提供正确的参数：下载链接和保存路径");
     }
