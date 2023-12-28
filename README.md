@@ -63,9 +63,10 @@ import java.net.HttpURLConnection;
 
 import javax.swing.JOptionPane;
 ```
-- 在涉及主类 ``public class MultiThreadedDownloader extends Thread {}`` 部分因文件名更改导致主类被更改：
-  - 修改文件名为 ``MultiThreadedDownloader`` 恢复主类关系；
-  - 更改 ``public class MultiThreadedDownloader extends Thread {}`` 中的 ``MultiThreadedDownloader`` 至当前工程文件名恢复主类关系。
+- 在涉及主类 ``public class Opendownload_main extends Thread {}`` 部分因文件名更改导致主类被更改：
+  - 修改文件名为 ``Opendownload_main`` 恢复主类关系；
+  - 更改 ``public class Opendownload_main extends Thread {}`` 中的 ``Opendownload_main`` 至当前工程文件名恢复主类关系。
+  > 从 LTS 70 发行版开始，原先的 ``MultiThreadedDownloader`` 命名空间已被 ``Opendownload_main`` 替代并弃用。若你仍在使用旧的发行版本，则需要考虑更新你的代码或发行版本体。
 - 在涉及关键部分代码时犯语法错误导致：
   - 订正语法；
   - 如果你正在使用 Visual Studio ，请将 IDE 切换到 Code 版本，并按错误提示订正功能错误。
