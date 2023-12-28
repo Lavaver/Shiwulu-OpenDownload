@@ -78,6 +78,21 @@ import javax.swing.JOptionPane;
 - "`Syntax error on token [MAIN CLASS], Identifier expected`" error:
   - You accidentally placed the project file outside the `src` directory of the project, putting it back in the `src` directory will allow the project file to be recognized again.
 
+## Release and Legacy Lifecycle
+
+I, like everyone else in the open source community, am naturally committed to improving the ease of use of software through constant patch fixes.
+
+Given the upcoming release on the .NET platform in parallel with the existing Java release, I'm going to give you a quick overview of the lifecycle of these two releases.
+
+**The Long Term Support (LTS) version will have up to 16 years of support, the Parallel (TTS) version will have up to 10 years of support, and the Standard version will have up to 5 years of support**.
+
+| Editions | Releases | LTS (Long Term Support) | Lifecycle Until |
+| --- | --- | --- | --- |
+| Latest version (Java, 1.1.2) | √ Yes | √ Yes | 2040/01/10 |
+| Latest Version (.NET, Preview) | √ Yes | = Concurrent(TTS) | 2034/01/01 |
+| 1.1 | √ Yes | × No | 2029/01/01 |
+| 1.0 | √ yes | × no | 2029/01/01 |
+
 ## Contribution Guide
 
 If you wish to contribute to the project, you can follow these steps:
