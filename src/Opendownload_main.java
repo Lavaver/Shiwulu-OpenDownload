@@ -219,6 +219,9 @@ public class Opendownload_main extends Thread {
         if (args.length == 0) {
             String downloadUrl = JOptionPane.showInputDialog("请输入下载地址：\n请避免使用百度网盘或 GitHub 链接，因为会出错（");
             if (downloadUrl == null) {
+
+    
+
 return;
 }
 
@@ -254,17 +257,50 @@ return;
         System.out.println("帮助");
         System.out.println("----------------");
         System.out.println("下载文件请直接启动本体，或使用 -quickdownload [下载地址] [保存路径] 快速开始一个新下载。");
+        System.out.println("使用 -nogui 以在无图形化界面下启动程序");
         System.out.println("使用 -about 获取发行版本体相关信息，使用 -help 呼出此页。");
         System.out.println("使用 -updatelog 呼出更新日志");
 
     } else if (args.length == 1 && args[0].equals("-updatelog")) {
-        System.out.println("更新日志（LTS 70c 版本）");
+        System.out.println("更新日志（LTS 70c2 版本）");
         System.out.println("----------------");
-        System.out.println("- 修正了在字节、KiB、MiB 以及 GiB 的单位换算笔误");
+        System.out.println("- 添加 -nogui 参数，使其可以在无图形化界面情况下使用。");
         System.out.println("有关详细信息，请参阅 https://github.com/Lavaver/Shiwulu-OpenDownload/releases");
+
+    } else if (args.length == 1 && args[0].equals("-nogui")) {
+        runWithoutGUI();
 
     } else {
         System.out.println("参数错误：请提供该参数正确的值（如：-quickdownload 后需要跟链接和保存路径）");
     }
+
+    
 }
+
+private static void runWithoutGUI() {
+    String downloadUrl = getInput("请输入下载地址：\n请避免使用百度网盘或 GitHub 链接，因为会出错（");
+    if (downloadUrl == null) {
+        return;
+    }
+
+    String savePath = getInput("请输入保存路径：");
+    if (savePath == null) {
+        return;
+    }
+
+    Opendownload_main downloader = new Opendownload_main(downloadUrl, savePath);
+    downloader.start();
+}
+
+private static String getInput(String message) {
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    System.out.println(message);
+    try {
+        return reader.readLine();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+    return null;
+}
+
 }
