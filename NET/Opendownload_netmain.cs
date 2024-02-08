@@ -23,7 +23,8 @@ class OpendownloadMain
     {
         if (args.Length < 2)
         {
-            Console.WriteLine("使用方法：OpenDownload [下载链接] [保存路径] [-showprogress] [-stop]");
+            Console.WriteLine("请使用程序名+[下载链接] [保存路径] <-showprogress> <-stop> 开始下载");
+            Console.WriteLine("使用 -help 参数查看帮助。");
             return;
         }
 

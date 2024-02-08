@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\Opendownload\\Shiwulu Opendownload For .NET\\Shiwulu Opendownload For .NET.csproj": {}
+    "D:\\repos\\Opendownload\\NET\\Shiwulu Opendownload For .NET.csproj": {}
   },
   "projects": {
-    "D:\\repos\\Opendownload\\Shiwulu Opendownload For .NET\\Shiwulu Opendownload For .NET.csproj": {
+    "D:\\repos\\Opendownload\\NET\\Shiwulu Opendownload For .NET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\Opendownload\\Shiwulu Opendownload For .NET\\Shiwulu Opendownload For .NET.csproj",
+        "projectUniqueName": "D:\\repos\\Opendownload\\NET\\Shiwulu Opendownload For .NET.csproj",
         "projectName": "Shiwulu Opendownload For .NET",
-        "projectPath": "D:\\repos\\Opendownload\\Shiwulu Opendownload For .NET\\Shiwulu Opendownload For .NET.csproj",
+        "projectPath": "D:\\repos\\Opendownload\\NET\\Shiwulu Opendownload For .NET.csproj",
         "packagesPath": "C:\\Users\\vvv\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\Opendownload\\Shiwulu Opendownload For .NET\\obj\\",
+        "outputPath": "D:\\repos\\Opendownload\\NET\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\新建文件夹 (18)\\NuGetPackages"
@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net8.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
             "projectReferences": {}
           }
         },
@@ -42,8 +42,8 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
           "imports": [
             "net461",
             "net462",
@@ -58,6 +58,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
