@@ -1,6 +1,8 @@
-# Shiwulu OpenDownload · 一款由 Java 开发的自由下载本体
+# Shiwulu OpenDownload · 一款由 Java & .NET 开发的自由下载本体
 
 若你需要英文版，请 [参阅此处](/README-EN.md)
+
+> 新的 .NET 版本已出炉！[参阅此处](/README-csharp.md) 以查看新信息！
 
 同时，本作者的该项目也在 [Gitee 码云](https://gitee.com/Lavalive/Shiwulu-OpenDownload) 同步镜像更新
 
@@ -16,13 +18,15 @@
 ## 如何使用
 
 1. 克隆或下载此仓库到本地计算机。
-> 以 Visual Studio Code 为例，打开克隆好的文件夹，定位到工程文件，然后按下 ``Ctrl+Shift+P`` 呼出任务面板，搜索 jar 关键词，点击``Java: 导出到 Jar 文件`` ，按默认设置等待编译完成即可。
+
+> 以 Visual Studio Code 为例，打开克隆好的文件夹，定位到工程文件，然后按下 ``Ctrl+Shift+P`` 呼出任务面板，搜索 jar 关键词，点击 ``Java: 导出到 Jar 文件`` ，按默认设置等待编译完成即可。
 
 > 如果你有 Java 开发套件 8（JDK 8），那么你可以使用 javac 命令编译。
 
 > 该项目仓库的 Release 页有已经编译好的 jar 文件可供使用。
 
 2. 运行 `Shiwulu.OpenDownload.jar` 文件以启动下载程序的GUI界面。
+
 > 如果双击运行未出现 GUI ，请打开 bash ，然后运行 ``java -jar Shiwulu.OpenDownload.jar``
 
 > 如果你是通过编译方式获取的 jar 文件，那么文件名可能会有些许差别，以实际情况为准。
@@ -30,6 +34,7 @@
 > 运行 jar 文件的标准命令为 ``java -jar [文件名].jar``
 
 3. 在界面中输入下载链接和保存路径，并点击开始按钮开始下载。
+
 > 下载过程中需要有一个 Internet 连接。
 
 > 该下载器多线程下载速度取决于带宽上限，如果带宽上限较低，会对下载速度造成轻微影响。
@@ -49,6 +54,7 @@
 ## 遇到代码错误导致的无法编译的解决方案
 
 - 可能是源代码工程内**缺少引用**导致，将引用恢复到如下所示即可恢复：
+
 ```java
 import java.awt.SystemTray;
 import java.awt.TrayIcon;
@@ -65,10 +71,13 @@ import java.net.HttpURLConnection;
 
 import javax.swing.JOptionPane;
 ```
+
 - 在涉及主类 ``public class Opendownload_main extends Thread {}`` 部分因文件名更改导致主类被更改：
   - 修改文件名为 ``Opendownload_main`` 恢复主类关系；
   - 更改 ``public class Opendownload_main extends Thread {}`` 中的 ``Opendownload_main`` 至当前工程文件名恢复主类关系。
+
   > 从 LTS 70 发行版开始，原先的 ``MultiThreadedDownloader`` 命名空间已被 ``Opendownload_main`` 替代并弃用。若你仍在使用旧的发行版本，则需要考虑更新你的代码或发行版本体。
+  >
 - 在涉及关键部分代码时犯语法错误导致：
   - 订正语法；
   - 如果你正在使用 Visual Studio ，请将 IDE 切换到 Code 版本，并按错误提示订正功能错误。
@@ -87,11 +96,11 @@ import javax.swing.JOptionPane;
 
 **长期支持（LTS）版可保有至多 16 年支持期限，并行（TTS）版可保有至多 10 年支持期限，标准版可保有至多 5 年支持期限**
 
-| 版本 | 发行版 | LTS（长期支持） | 生命周期直至 |
-| --- | --- | --- | --- |
-| 最新版本（Java，1.1.2.x） | √ 是 | √ 是 | 2040/01/10 |
-| 1.1 | √ 是 | × 否 | 2029/01/01 |
-| 1.0 | √ 是 | × 否 | 2029/01/01 |
+| 版本                      | 发行版 | LTS（长期支持） | 生命周期直至 |
+| ------------------------- | ------ | --------------- | ------------ |
+| 最新版本（Java，1.1.2.x） | √ 是  | √ 是           | 2040/01/10   |
+| 1.1                       | √ 是  | × 否           | 2029/01/01   |
+| 1.0                       | √ 是  | × 否           | 2029/01/01   |
 
 ## 贡献指南
 
