@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Shiwulu Opendownload For .NET")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3922fb93a9eb319756113e9c9bce32622f5ccb92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05910f5a7a28649b5ab897bf4a3b926e0ef42a8a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Shiwulu Opendownload For .NET")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Shiwulu Opendownload For .NET")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

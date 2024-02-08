@@ -14,17 +14,16 @@ class OpendownloadMain
     private int updateCount = 0;
     private Stopwatch stopwatch = new Stopwatch();
 
-    public OpendownloadMain(string[] args)
+    public async Task Run(string[] args)
     {
-        ParseArguments(args).Wait();
+        await ParseArguments(args);
     }
 
     private async Task ParseArguments(string[] args)
     {
         if (args.Length < 2)
         {
-            Console.WriteLine("请使用程序名+[下载链接] [保存路径] <-showprogress> <-stop> 开始下载");
-            Console.WriteLine("使用 -help 参数查看帮助。");
+            ShowHelp();
             return;
         }
 
@@ -33,25 +32,25 @@ class OpendownloadMain
 
         for (int i = 2; i < args.Length; i++)
         {
-            if (args[i] == "-showprogress")
+            if (string.Equals(args[i], "-showprogress", StringComparison.OrdinalIgnoreCase))
             {
                 showProgress = true;
             }
-            else if (args[i] == "-stop")
+            else if (string.Equals(args[i], "-stop", StringComparison.OrdinalIgnoreCase))
             {
                 stopDownload = true;
             }
-            else if (args[i] == "-about")
+            else if (string.Equals(args[i], "-about", StringComparison.OrdinalIgnoreCase))
             {
                 ShowAbout();
                 return;
             }
-            else if (args[i] == "-updatelog")
+            else if (string.Equals(args[i], "-updatelog", StringComparison.OrdinalIgnoreCase))
             {
                 ShowUpdateLog();
                 return;
             }
-            else if (args[i] == "-help")
+            else if (string.Equals(args[i], "-help", StringComparison.OrdinalIgnoreCase))
             {
                 ShowHelp();
                 return;
@@ -212,8 +211,12 @@ class OpendownloadMain
         Console.WriteLine("-help: 重新显示该帮助");
     }
 
-    static void Main(string[] args)
+    class Program
     {
-        OpendownloadMain program = new OpendownloadMain(args);
+        static async Task Main(string[] args)
+        {
+            var opendownload = new OpendownloadMain();
+            await opendownload.Run(args);
+        }
     }
 }
