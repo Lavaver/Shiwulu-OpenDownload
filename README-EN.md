@@ -14,13 +14,15 @@ If you need the Chinese version, please refer to [here](/README.md)
 ## How to Use
 
 1. Clone or download this repository to your local computer.
+
 > Take Visual Studio Code as an example, open the cloned folder, locate the project file, then press ``Ctrl+Shift+P`` to call up the task panel, search for jar keywords, click to ``Java: Export Jar``, and wait for the compilation to complete according to the default settings.
 
 > If you have a Java Development Kit 8 (JDK 8), then you can compile using the javac command.
 
-> The release page of the project's repository has compiled jar files ready for use. 
+> The release page of the project's repository has compiled jar files ready for use.
 
 2. Run the `Shiwulu.OpenDownload.jar` file to launch the GUI interface for the download program.
+
 > If double-clicking does not open the GUI, please open a bash terminal and run ``java -jar Shiwulu.OpenDownload.jar``
 
 > If you get the jar file by compilation, the file name may be slightly different, depending on the actual situation.
@@ -28,6 +30,7 @@ If you need the Chinese version, please refer to [here](/README.md)
 > The standard command to run a jar file is ``java -jar [filename].jar``
 
 3. Enter the download link and the save path in the interface, and click the start button to begin the download.
+
 > The download process requires an internet connection.
 
 > The multi-threaded download speed of the downloader depends on the bandwidth limit. If the bandwidth limit is low, it will have a slight impact on the download speed.
@@ -47,6 +50,7 @@ If you need the Chinese version, please refer to [here](/README.md)
 ## Solutions for Compilation Errors Caused by Code Issues
 
 - Possible missing references in the source code project causing the error. Restore the references as shown below to resolve the issue:
+
 ```java
 import java.awt.SystemTray;
 import java.awt.TrayIcon;
@@ -63,48 +67,28 @@ import java.net.HttpURLConnection;
 
 import javax.swing.JOptionPane;
 ```
+
 - Possible modifications to the main class `public class Opendownload_main extends Thread {}` due to file name changes:
+
   - Rename the file to `Opendownload_main` to restore the relationship with the main class;
   - Change `Opendownload_main` in `public class Opendownload_main extends Thread {}` to the current project file name to restore the relationship with the main class.
+
   > Starting with the LTS 70 distribution, the original ``MultiThreadedDownloader`` namespace has been replaced by ``Opendownload_main`` and deprecated. If you are still using an older distribution, you may want to consider updating your code or distribution body.
+  >
 - Syntax errors caused by typos in critical sections of code:
+
   - Correct the syntax;
   - If you are using Visual Studio, switch the IDE to the Code version and correct the functional error as prompted.
 - Unable to compile and run in Debug mode:
+
   - If you are using Visual Studio, switch the IDE to the Code version and it will automatically find JDK and compile and run.
 - Strikethrough statements:
+
   - The method you are using has been deprecated in your JDK version. If you want to be compatible with higher versions of Java, you may need to modify the relevant statements.
 - "`[METHOD] cannot be resolved to a type`" error:
+
   - You accidentally deleted the reference required for this method. For example, "`TrayIcon cannot be resolved to a type`" is caused by the lack of "`import java.awt.TrayIcon;`" reference. The specific situation requires adding references according to the actual situation.
 - "`Syntax error on token [MAIN CLASS], Identifier expected`" error:
+
   - You accidentally placed the project file outside the `src` directory of the project, putting it back in the `src` directory will allow the project file to be recognized again.
-
-## Release and Legacy Lifecycle
-
-I, like everyone else in the open source community, am naturally committed to improving the ease of use of software through constant patch fixes.
-
-**The Long Term Support (LTS) version will have up to 16 years of support, the Parallel (TTS) version will have up to 10 years of support, and the Standard version will have up to 5 years of support**.
-
-| Editions | Releases | LTS (Long Term Support) | Lifecycle Until |
-| --- | --- | --- | --- |
-| Latest version (Java, 1.1.2.x) | √ Yes | √ Yes | 2040/01/10 |
-| 1.1 | √ Yes | × No | 2029/01/01 |
-| 1.0 | √ yes | × no | 2029/01/01 |
-
-## Contribution Guide
-
-If you wish to contribute to the project, you can follow these steps:
-
-1. Fork this repository on GitHub.
-2. Create a new branch: `git checkout -b feature/your-feature-name`.
-3. Make necessary changes and commit them to your branch: `git commit -am 'Add some feature'`.
-4. Push to the branch: `git push origin feature/your-feature-name`.
-5. Submit a pull request.
-
-## Issue Feedback
-
-If you encounter any problems while using the project, or have any suggestions and improvement ideas, please submit them in [GitHub Issues](https://github.com/Lavaver/Shiwulu-OpenDownload/issues).
-
-Thank you for your contributions to the project!
-
-## ENJOY!
+    ## Contribution Guide

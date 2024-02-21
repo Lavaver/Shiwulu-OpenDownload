@@ -1,8 +1,10 @@
-# Shiwulu OpenDownload · 一款由 Java & .NET 开发的自由下载本体
+# Shiwulu OpenDownload · 一款由接近辍学的初中生开发的自由下载本体
 
 若你需要英文版，请 [参阅此处](/README-EN.md)
 
 > 新的 .NET 版本已出炉！[参阅此处](/README-csharp.md) 以查看新信息！
+
+> 新的 Python 版本已出炉！[参阅此处](/README-python.md) 以查看新信息！
 
 同时，本作者的该项目也在 [Gitee 码云](https://gitee.com/Lavalive/Shiwulu-OpenDownload) 同步镜像更新
 
@@ -73,34 +75,28 @@ import javax.swing.JOptionPane;
 ```
 
 - 在涉及主类 ``public class Opendownload_main extends Thread {}`` 部分因文件名更改导致主类被更改：
+
   - 修改文件名为 ``Opendownload_main`` 恢复主类关系；
   - 更改 ``public class Opendownload_main extends Thread {}`` 中的 ``Opendownload_main`` 至当前工程文件名恢复主类关系。
 
   > 从 LTS 70 发行版开始，原先的 ``MultiThreadedDownloader`` 命名空间已被 ``Opendownload_main`` 替代并弃用。若你仍在使用旧的发行版本，则需要考虑更新你的代码或发行版本体。
   >
 - 在涉及关键部分代码时犯语法错误导致：
+
   - 订正语法；
   - 如果你正在使用 Visual Studio ，请将 IDE 切换到 Code 版本，并按错误提示订正功能错误。
 - 无法编译 Debug 运行：
+
   - 如果你正在使用 Visual Studio ，请将 IDE 切换到 Code 版本，它会自动找到 JDK 并编译运行。
 - 出现划删除线的语句：
+
   - 你所使用的 JDK 版本已弃用该方法，如果你想兼容高版本 Java ，则可能需要对相关语句进行更改。
 - 出现 ``[方法] cannot be resolved to a type`` 错误：
+
   - 你意外删除了这个方法需要的引用。以 ``TrayIcon cannot be resolved to a type`` 为例，这因为你缺少了 ``import java.awt.TrayIcon;`` 引用导致的。具体情况需要参考现实情况添加引用。
 - 出现 ``Syntax error on token [主类], Identifier expected`` 错误：
+
   - 你意外将工程文件放置在这个工程 src 目录以外的地方了，放回 src 目录就可以重新识别出工程文件了。
-
-## 发行与旧版生命周期
-
-我，和大家一样的开源社区创作者，自然要通过不断的补丁修复来提高软件易用性。
-
-**长期支持（LTS）版可保有至多 16 年支持期限，并行（TTS）版可保有至多 10 年支持期限，标准版可保有至多 5 年支持期限**
-
-| 版本                      | 发行版 | LTS（长期支持） | 生命周期直至 |
-| ------------------------- | ------ | --------------- | ------------ |
-| 最新版本（Java，1.1.2.x） | √ 是  | √ 是           | 2040/01/10   |
-| 1.1                       | √ 是  | × 否           | 2029/01/01   |
-| 1.0                       | √ 是  | × 否           | 2029/01/01   |
 
 ## 贡献指南
 
