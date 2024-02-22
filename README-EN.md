@@ -3,7 +3,7 @@
 
 If you need the Chinese version, please [see here](/README.md).
 
-Extremely efficient design, with multi-threading and lightweight technology, this is a ~~ miracle ~~ (crossed out) along with the technology and hard to live in Xi'an and Weinan continue to code that unbearable defense code, is also ~~ I have nothing to do myself just do it ~~ (crossed out again).
+Extremely efficient design, with multi-threading and lightweight technology, this is a ~~miracle~~ (crossed out) along with the technology and hard to live in Xi'an and Weinan continue to code that unbearable s**t code, is also ~~I have nothing to do myself just do it~~ (crossed out again).
 
 *once written everywhere debugging belongs to be*
 
