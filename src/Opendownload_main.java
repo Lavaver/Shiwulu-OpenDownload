@@ -10,7 +10,6 @@ import java.io.*;
 import java.nio.file.*;
 import java.net.URL;
 import java.net.HttpURLConnection;
-
 import javax.swing.JOptionPane;
 
 public class Opendownload_main extends Thread {
@@ -260,16 +259,19 @@ return;
         System.out.println("使用 -nogui 以在无图形化界面下启动程序");
         System.out.println("使用 -about 获取发行版本体相关信息，使用 -help 呼出此页。");
         System.out.println("使用 -updatelog 呼出更新日志");
+        System.out.println("使用 -game 可让你在闲暇之余玩上猜数字小游戏");
 
     } else if (args.length == 1 && args[0].equals("-updatelog")) {
-        System.out.println("更新日志（LTS 70c2 版本）");
+        System.out.println("更新日志（LTS 70c3 版本）");
         System.out.println("----------------");
-        System.out.println("- 添加 -nogui 参数，使其可以在无图形化界面情况下使用。");
+        System.out.println("- 添加 -game 参数，能让玩家在闲暇之余玩上小游戏（科技与狠活了属于是）");
         System.out.println("有关详细信息，请参阅 https://github.com/Lavaver/Shiwulu-OpenDownload/releases");
 
     } else if (args.length == 1 && args[0].equals("-nogui")) {
         runWithoutGUI();
 
+    } else if (args.length == 1 && args[0].equals("-game")) {
+        smallgame.main(args); // 调用 smallgame 类中的主方法
     } else {
         System.out.println("参数错误：请提供该参数正确的值（如：-quickdownload 后需要跟链接和保存路径）");
     }
