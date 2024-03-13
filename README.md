@@ -24,7 +24,7 @@
 
 > 如果你有 Java 开发套件 8（JDK 8），那么你可以使用 javac 命令编译。
 
-> 该项目仓库的 Release 页有已经编译好的 jar 文件可供使用。
+> 该项目仓库的 Release 页有已经编译好的 jar 和 .NET Framework 版文件可供使用。
 
 2. 运行 `Shiwulu.OpenDownload.jar` 文件以启动下载程序的GUI界面。
 

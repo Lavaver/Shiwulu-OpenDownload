@@ -23,7 +23,7 @@ Extremely efficient design, with multi-threading and lightweight technology, thi
 
 > If you have the Java Development Kit 8 (JDK 8), you can use the javac command to compile.
 
-> A compiled jar file is available on the Release page of the project repository.
+> A compiled jar file / .NET Framework edition is available on the Release page of the project repository.
 
 2. Run the `Shiwulu.OpenDownload.jar` file to launch the downloader's GUI interface.
 

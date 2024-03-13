@@ -72,7 +72,38 @@ public class Opendownload_main extends Thread {
 
             URL url = new URL(downloadUrl);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            connection.connect();
+            // 对于其他链接，使用常规的User-Agent
+            connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3");
+
+        
+          connection.connect();
+
+          int responseCode = connection.getResponseCode();
+
+           // 根据不同的HTTP响应码执行不同的操作
+           switch (responseCode) {
+            case HttpURLConnection.HTTP_OK: // 200
+                // 正常情况，继续执行下载逻辑
+                break;
+            case HttpURLConnection.HTTP_UNAUTHORIZED: // 401
+                showErrorMessage("未授权的资源访问。");
+                return;
+            case HttpURLConnection.HTTP_FORBIDDEN: // 403
+                showErrorMessage("禁止访问。");
+                return;
+            case HttpURLConnection.HTTP_NOT_FOUND: // 404
+                showErrorMessage("文件未找到。");
+                return;
+            case HttpURLConnection.HTTP_INTERNAL_ERROR: // 500
+                showErrorMessage("服务器内部错误。");
+                return;
+            // 可以根据需要添加更多的错误处理分支
+            default:
+                if (responseCode >= 400) {
+                    showErrorMessage("未知错误。HTTP状态码：" + responseCode);
+                    return;
+                }
+            }
 
             int fileLength = connection.getContentLength();
             String fileName = new File(url.getPath()).getName();
@@ -123,7 +154,7 @@ public class Opendownload_main extends Thread {
             System.err.println(stackTrace);
             System.err.println("请不要将此控制台截图发给别人，这没有任何作用。");
             System.err.println("你应该全选提交控制台输出的所有信息，并前往 https://github.com/Lavaver/Shiwulu-OpenDownload/issues 发 issues 以帮助作者快速定位问题并修复");
-            System.err.println("而且，对于部分诸如 CDN 镜像站、百度网盘、GitHub Releases 下载可能会直接报错 403 导致程序出错，请见谅！");
+            System.err.println("而且，对于部分检查请求头极为离谱的网站仍存在 403 错误，请见谅！");
 
             showErrorMessage(errorMessage);
         }
@@ -216,7 +247,7 @@ public class Opendownload_main extends Thread {
 
     public static void main(String[] args) {
         if (args.length == 0) {
-            String downloadUrl = JOptionPane.showInputDialog("请输入下载地址：\n请避免使用百度网盘或 GitHub 链接，因为会出错（");
+            String downloadUrl = JOptionPane.showInputDialog("请输入下载地址：");
             if (downloadUrl == null) {
 
     
@@ -250,7 +281,7 @@ return;
         System.out.println("Shiwulu OpenDownload");
         System.out.println("请支持自由软件事业的开发，谢谢！");
         System.out.println("如果你是通过购买而来的此发行版本体，那么你应该要求退款，并做法律程序。");
-        System.out.println("由 Lavaver 开发、发行的实用下载本体。1.1.2.70c LTS 发行版");
+        System.out.println("由 Lavaver 开发、发行的实用下载本体。2.1.2.70c Build 7 LTS 发行版");
 
     } else if (args.length == 1 && args[0].equals("-help")) {
         System.out.println("帮助");
@@ -264,7 +295,8 @@ return;
     } else if (args.length == 1 && args[0].equals("-updatelog")) {
         System.out.println("更新日志（LTS 70c3 版本）");
         System.out.println("----------------");
-        System.out.println("- 添加 -game 参数，能让玩家在闲暇之余玩上小游戏（科技与狠活了属于是）");
+        System.out.println("- 本次更新包括了部分增量改进。");
+        System.out.println("- 本次更新针对于 .NET Framework 包括了部分增量改进，去除了多余元素适应开发环境");
         System.out.println("有关详细信息，请参阅 https://github.com/Lavaver/Shiwulu-OpenDownload/releases");
 
     } else if (args.length == 1 && args[0].equals("-nogui")) {
