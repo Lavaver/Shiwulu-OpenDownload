@@ -6,7 +6,7 @@
 
 *一次编写处处调试属于是（*
 
-> 全新 .NET Framework 版已全面问世！它的问世也将意味着原先的 Java 版很快就会被替代且最终停止维护。
+> 全新 .NET Framework 版已全面问世！它的问世也将意味着原先的 Java 版很快就会被替代且最终停止维护。全新项目地址：[参阅此处](https://github.com/Lavaver/Shiwulu-OpenDownload-Framework-Edition)
 
 > Java 版停止维护后，代码中仍会保留其代码以供有需要的开发者使用。届时代码会迁移至 Old-Code/bin 目录中。
 
