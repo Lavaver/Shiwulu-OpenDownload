@@ -281,7 +281,7 @@ return;
         System.out.println("Shiwulu OpenDownload");
         System.out.println("请支持自由软件事业的开发，谢谢！");
         System.out.println("如果你是通过购买而来的此发行版本体，那么你应该要求退款，并做法律程序。");
-        System.out.println("由 Lavaver 开发、发行的实用下载本体。2.1.2.70c Build 7 LTS 发行版");
+        System.out.println("由 Lavaver 开发、发行的实用下载本体。2.1.2.100 Fianle Build 发行版");
 
     } else if (args.length == 1 && args[0].equals("-help")) {
         System.out.println("帮助");
@@ -295,15 +295,17 @@ return;
     } else if (args.length == 1 && args[0].equals("-updatelog")) {
         System.out.println("更新日志（LTS 70c3 版本）");
         System.out.println("----------------");
-        System.out.println("- 本次更新包括了部分增量改进。");
-        System.out.println("- 本次更新针对于 .NET Framework 包括了部分增量改进，去除了多余元素适应开发环境");
-        System.out.println("有关详细信息，请参阅 https://github.com/Lavaver/Shiwulu-OpenDownload/releases");
+        System.out.println("- 本次更新为最后一次专门维护，在仅剩 6 天的最终期限内感谢 Java 版带给我的优良编程习惯以及成就感。对于最终期限最后一个文档内我对这个作品的闲谈，运行 -Finale 参数来看看吧");
 
     } else if (args.length == 1 && args[0].equals("-nogui")) {
         runWithoutGUI();
 
     } else if (args.length == 1 && args[0].equals("-game")) {
         smallgame.main(args); // 调用 smallgame 类中的主方法
+
+    } else if (args.length == 1 && args[0].equals("-Finale")) {
+        FinaleDoc.main(args);
+
     } else {
         System.out.println("参数错误：请提供该参数正确的值（如：-quickdownload 后需要跟链接和保存路径）");
     }
