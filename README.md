@@ -1,18 +1,16 @@
 # Shiwulu OpenDownload · 一款由伴随着科技与狠活开发的自由下载本体
 
-若你需要英文版，请 [参阅此处](/README-EN.md)
-
 极为高效的设计，配合多线程与轻量化的技术，这是一个~~奇迹~~（划掉）伴随着科技与狠活辗转于西安与渭南之间持续不断码那不堪的答辩代码，也是~~我闲来无事自己随便做做的而已~~（再次划掉）。
 
 *一次编写处处调试属于是（*
 
-> 全新 .NET Framework 版已全面问世！它的问世也将意味着原先的 Java 版很快就会被替代且最终停止维护。全新项目地址：[参阅此处](https://github.com/Lavaver/Shiwulu-OpenDownload-Framework-Edition)
+> 全新 .NET 版已全面问世！它的问世也将意味着原先的 Java 版很快就会被替代且最终停止维护。全新项目地址：[参阅此处](https://github.com/Lavaver/Shiwulu-NewOpenDownload)
 
-> Java 版停止维护后，代码中仍会保留其代码以供有需要的开发者使用。届时代码会迁移至 Old-Code/bin 目录中。
+> Java 版停止维护后，代码中仍会保留其代码以供有需要的开发者使用。
 
 > Java 版将会在 2024/06/01 00:00 (UTC+8) 结束支持。
 
-> 结束支持后，你仍可在旧的 Release 中下载旧版。但新的 Release 将只保留 Framework 版。
+> 结束支持后，你仍可在旧的 Release 中下载旧版。但新的 Release 将只保留 Dotnet 版。
 
 ## 功能特点
 
